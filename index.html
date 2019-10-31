@@ -1,0 +1,113 @@
+<!-- Ejercicio de práctica del módulo 1 HTML - Práctica P10a - Estamos realizando una encuesta de satisfacción sobre un producto que hemos comprado. La empresa necesita conocer de la opinión de los usuarios a la hora de consumir eficientemente su producto.
+
+Para ello, necesitamos:
+
+Un control donde pongamos el Código postal
+Nivel de satisfacción con el producto (del 1 al 5)
+Email del usuario que ha consumido el producto
+Puntos positivos del producto (en texto libre)
+Puntos negativos (texto libre)
+En un listado de características que te inventes, que el usuario pueda elegir entre las siguientes opciones: excelente, bueno, regular, pésimo (resuelve este punto de dos maneras) -->
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Mi Primer Formulario en HTML</title>
+	</head>
+	<body>
+		<main>
+			<div>
+				<h1>¿Qué te ha parecido nuestro producto?</h1>
+				<h2>Por favor rellena el siguiente formulario</h2>
+			</div>
+			<div>
+				<form action="miservidor.php" method="post">
+					<fieldset>
+						<legend>Danos tu opinión</legend>
+						<div>
+							<label for="cp">Código Postal</label>
+							<input name="cp" type="texto"><br><br>
+						</div>
+						<div>
+							<label for="nivel-satisfaccion">Nivel de Satisfacción (del 1 al 5):</label> <br>
+							<input name="nivel-satisfaccion" type="radio" value="1"> 1 <br>
+							<input name="nivel-satisfaccion" type="radio" value="2"> 2 <br>
+							<input name="nivel-satisfaccion" type="radio" value="3"> 3 <br>
+							<input name="nivel-satisfaccion" type="radio" value="4"> 4 <br>
+							<input name="nivel-satisfaccion" type="radio" value="5"> 5 <br><br>
+						</div>
+						<div>
+							<label for="email">Tu Email</label>
+							<input name="email" type="texto"><br><br>
+						</div>
+						<div>
+							<label for="puntos-positivos">Puntos positivos acerca del producto</label>
+							<textarea name="puntos-positivos"></textarea><br><br>
+						</div>
+						<div>
+							<label for="puntos-negativos">Puntos negativos acerca del producto</label>
+							<textarea name="puntos-negativos"></textarea><br><br>
+						</div>
+						<div>
+							<p>Valora las siguientes características del producto:</p>
+							<ul>
+								<div>
+									<label for="comodidad"><b>Comodidad</b></label> <br>
+									<input name="comodidad" type="radio" value="excelente"> Excelente <br>
+									<input name="comodidad" type="radio" value="bueno"> Bueno <br>
+									<input name="comodidad" type="radio" value="regular"> Regular <br>
+									<input name="comodidad" type="radio" value="pesimo"> Pésimo <br><br>
+								</div>
+								<div>
+									<label for="comodidad"><b>Comodidad</b></label><br>
+									<select name="comodidad">
+										<option value="excelente">Excelente</option>
+										<option value="bueno">Bueno</option>
+										<option value="regular" selected="selected">Regular</option>
+										<option value="pesimo">Pésimo</option>
+									</select><br><br>
+								</div>
+								<div>
+									<label for="precio"><b>Precio</b></label> <br>
+									<input name="precio" type="radio" value="excelente"> Excelente <br>
+									<input name="precio" type="radio" value="bueno"> Bueno <br>
+									<input name="precio" type="radio" value="regular"> Regular <br>
+									<input name="precio" type="radio" value="pesimo"> Pésimo <br><br>
+								</div>
+								<div>
+									<label for="precio"><b>Precio</b></label> <br>
+									<select name="precio">
+										<option value="excelente">Excelente</option>
+										<option value="bueno">Bueno</option>
+										<option value="regular">Regular</option>
+										<option value="pesimo">Pésimo</option>
+									</select><br><br>
+								</div>
+								<div>
+									<label for="envio"><b>Envío</b></label> <br>
+									<input name="envio" type="radio" value="excelente"> Excelente <br>
+									<input name="envio" type="radio" value="bueno"> Bueno <br>
+									<input name="envio" type="radio" value="regular"> Regular <br>
+									<input name="envio" type="radio" value="pesimo"> Pésimo <br><br>
+								</div>
+								<div>
+									<label for="envio"><b>Envío</b></label> <br>
+									<select name="envio">
+										<option value="excelente">Excelente</option>
+										<option value="bueno">Bueno</option>
+										<option value="regular">Regular</option>
+										<option value="pesimo" selected="selected">Pésimo</option>
+									</select><br><br>
+								</div>
+							</ul>
+						</div>
+						<div>
+							<input type="submit" value="Enviar" style="width: 200px;">
+						</div>
+					</fieldset>
+				</form>
+			</div>
+		</main>
+	</body>
+</html>
